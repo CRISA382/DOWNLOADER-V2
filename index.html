@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roihan Downloader</title>
+    <link rel="icon" href="assets/profile.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="profile-header">
+            <div class="profile-avatar-wrapper">
+                <img src="assets/profile.jpg" alt="Profile" class="profile-avatar"
+                     onerror="this.src='https://ui-avatars.com/api/?name=Roihan&background=007bff&color=fff&size=200'">
+                <div class="online-indicator"></div>
+            </div>
+            <h1>Roihan Downloader</h1>
+            <p class="tagline">Download Video TikTok & Instagram Tanpa Watermark</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab active" data-platform="auto">
+                <i class="fas fa-bolt"></i> Auto
+            </button>
+            <button class="tab" data-platform="tiktok">
+                <i class="fab fa-tiktok"></i> TikTok
+            </button>
+            <button class="tab" data-platform="instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </button>
+        </div>
+
+        <div class="downloader-box">
+            <div class="input-group">
+                <i class="fas fa-link input-icon"></i>
+                <input type="text" id="videoUrl" placeholder="Tempel tautan TikTok atau Instagram...">
+                <button class="clear-btn" onclick="clearInput()" title="Hapus">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <button onclick="downloadVideo()" id="downloadBtn" class="download-btn">
+                <i class="fas fa-download"></i> Unduh Sekarang
+            </button>
+        </div>
+
+        <div class="examples">
+            <span>Contoh:</span>
+            <code onclick="fillExample('https://www.tiktok.com/@username/video/123')">TikTok</code>
+            <code onclick="fillExample('https://www.instagram.com/reel/ABC123/')">Instagram</code>
+        </div>
+
+        <div class="result" id="result"></div>
+
+        <footer class="footer">
+            <p>© 2024 <strong>Roihan Downloader</strong> • All rights reserved</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
